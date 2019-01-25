@@ -13,5 +13,7 @@ namespace sales.Domain.Models
         {
 
         }
+
+        public System.Data.Entity.DbSet<sales.Common.Models.Product> Products { get; set; }
     }
 }
