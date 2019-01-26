@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace sales.Domain.Models
+﻿namespace sales.Domain.Models
 {
+    using System.Data.Entity;
+    using sales.Common.Models;
+
     public class DataContext : DbContext
     {
         public DataContext() : base("DefaultConnection")
@@ -14,6 +10,6 @@ namespace sales.Domain.Models
 
         }
 
-        public System.Data.Entity.DbSet<sales.Common.Models.Product> Products { get; set; }
-    }
+        public DbSet<Product> Products { get; set; }
+    } 
 }
